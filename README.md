@@ -21,11 +21,16 @@ neu create folder-name --template neutralinojs/neutralinojs-zero
 ## How to debug
 Add `modes.window.enableInspector: true` to the `neutralino.config.json` and run it with `neu run`.
 
-## How to build a release file
+## How to build a release binary
 ```bash
-$ neu build --release
+$ neu build
 # ./dist/google-keep/keep-linux_x64
 ```
+
+Adding `--release` will create a zipball... but that's of no much use.
+You may want to use the custom build scripts from [hschneider's repo](https://neutralino.js.org/docs/distribution/overview#creating-portable-application-packages-using-build-scripts).
+
+Other than that, this repo includes a simple `Makefile` that helps with creating a `.desktop` file and copying the necessary files to `/opt`, for a local Linux install.
 
 
 [neu]: https://neutralino.js.org
