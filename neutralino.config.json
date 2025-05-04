@@ -1,0 +1,40 @@
+{
+  "applicationId": "br.igorsantos.keep",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "url": "https://keep.google.com",
+  "documentRoot": "/www/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "nativeAllowList": [
+    "app.*"
+  ],
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": false
+  },
+  "dataLocation": "system",
+  "storageLocation": "system",
+  "modes": {
+    "window": {
+      "title": "Google Keep",
+      "icon": "/www/icon-256.png",
+
+      "enableInspector": false,
+      "fullScreen": false,
+
+      "width": 850,
+      "height": 1080,
+      "minWidth": 400,
+      "minHeight": 360
+    }
+  },
+  "cli": {
+    "binaryName": "keep",
+    "resourcesPath": "/www/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/www/neutralino.js",
+    "binaryVersion": "6.0.0",
+    "clientVersion": "6.0.0"
+  }
+}
