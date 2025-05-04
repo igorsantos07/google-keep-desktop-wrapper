@@ -1,6 +1,8 @@
 # Google Keep wrapper
 A basic [NeutralinoJS][neu] app that wraps `keep.google.com`.
 
+> THIS IS BROKEN!!!! https://github.com/neutralinojs/neutralinojs/issues/1413
+
 NeutralinoJS was chosen because it's lighter than Electron, and runs on JS instead of Tauri's Rust.
 
 ## How to install NeutralinoJS's runtime
