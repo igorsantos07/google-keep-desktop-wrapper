@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "version": "1.0.0",
+  "productName": "Google Keep desktop",
+  "identifier": "br.igorsantos07.keep",
+//  "build": { "frontendDist": "../src" },
+  "app": {
+//    "withGlobalTauri": true,
+    "enableGTKAppId": true,
+    "windows": [
+      {
+        "title": "Google Keep",
+        "url": "https://keep.google.com",
+        "backgroundColor": "#FBBC04",
+        "visibleOnAllWorkspaces": false,
+        "zoomHotkeysEnabled": true,
+        "width": 850,
+        "height": 1080
+      }
+    ],
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb"],
+    "category": "Productivity",
+    "shortDescription": "Google Keep, wrapped in a Tauri desktop app",
+    "icon": [
+      "icons/32x32.png",
+      "icons/64x64.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.png", //512x512
+      "icons/icon.ico"
+    ]
+  }
+}
+
