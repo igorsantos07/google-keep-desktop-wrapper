@@ -18,11 +18,11 @@ This solves both issues: icons are well-defined, and the web apps are not tied t
 
 1. find an icon that should be, ideally, at least 1024x1024. You may want to add some padding to it, if you're building for mobile devices (specially iOS)
 
-2. get into `src-tauri` and run `npm tauri icon «your-file»`
+2. get into `src-tauri` and run `npm tauri icon «your-file»` __(possible complaints if the file is in the parent directory... create a temporary copy into `src-tauri`)_
 
 3. delete what you won't be using, such as:
-   
-    - `icons/icon.icns` (Mac stuff)
+
+4.  - `icons/icon.icns` (Mac stuff)
    
     - `icons/Square*` (why all those odd sizes??)
    
@@ -51,6 +51,10 @@ This solves both issues: icons are well-defined, and the web apps are not tied t
 - `license`: important
 
 - `homepage`: useful, I guess, and used by some bundles
+
+- `[lib] name`: also needs manual editing (why couldn't this be based on the main `name`??)
+  
+   - Then, change this at `src-tauri/src/main.ts` as well.
 
 - `[build-dependencies]` and `[dependencies]`: this is where you [configure] it to accept JSON5 — which accepts comments!!
 
@@ -90,6 +94,8 @@ This solves both issues: icons are well-defined, and the web apps are not tied t
   
    - `licenseFile`: if you want to point to the file path as well
 
+
+
 ### How to test it
 
 ```bash
@@ -108,5 +114,5 @@ The raw executable goes to `src-tauri/target/release/`.
 #### How to install it
 
 ```bash
-$ gdebi-gtk `src-tauri/target/release/bundle/[...].deb
+$ apt install "src-tauri/target/release/bundle/[...].deb"
 ```
